@@ -1,0 +1,30 @@
+깃주소
+https://github.com/YooSH-R/bootstrap2025.git
+---------------------------------------------------
+1. 처음 작업시
+	1) 전역구성 설정
+git config --global core.autocrlf true
+
+	2) 개인정보 입력
+git config --global user.name '이름'
+git config --global user.email '이메일'
+
+	3) 정보확인
+git config --global --list
+---------------------------------------------------
+4) git init (초기화 - 기록할 준비 마침, git폴더가 생성)
+5) git status (정보확인, 파일목록 확인, 빨간색으로 표시)
+6) git add . (프로젝트 폴더 안의 모든 폴더 & 파일 추적함, *띄어쓰기 주의)
+7) git status (파일목록 초록색으로 표시)
+8) git commit -m '기록할 메세지 내용'
+=> 글자 색상이 흰색으로 변경됨.
+9) git log(기록 남긴 시점 확인)
+10) git remote add origin https://github.com/YooSH-R/bootstrap2025.git (붙여넣기는 키보드가 아닌 마우스 오른쪽 버튼으로)
+11) git remote -v(연결확인)
+12) git branch -m master main (브랜치명 변경)
+13) git push origin +main (파일, 폴더 업로드)
+---------------------------------------------------
+수정하고, 다시 업로드하는 경우
+6)git add .
+8)git commit -m
+13) git push origin +main 
