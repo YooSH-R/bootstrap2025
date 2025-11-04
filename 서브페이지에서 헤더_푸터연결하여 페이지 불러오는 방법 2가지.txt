@@ -1,0 +1,53 @@
+
+방법1. 서버에서 데이터 파일 불러오기 (전통적인 방식)
+
+<!-- index.html 대신 index.php -->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>홈페이지</title>
+</head>
+<body>
+  <?php include 'header.html'; ?>
+  
+  <main>
+    <h1>메인 콘텐츠</h1>
+  </main>
+
+  <?php include 'footer.html'; ?>
+</body>
+</html>
+
+-----------------------------------------------
+
+방법2. 서버가 없거나 정적인 사이트일 경우  
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>홈페이지</title>
+</head>
+<body>
+  <div id="header"></div>
+
+  <main>
+    <h1>메인 콘텐츠</h1>
+  </main>
+
+  <div id="footer"></div>
+
+  <script>
+    // header.html 삽입
+    fetch('header.html')
+      .then(response => response.text())
+      .then(data => document.getElementById('header').innerHTML = data);
+
+    // footer.html 삽입
+    fetch('footer.html')
+      .then(response => response.text())
+      .then(data => document.getElementById('footer').innerHTML = data);
+  </script>
+</body>
+</html>

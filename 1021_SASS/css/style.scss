@@ -1,0 +1,29 @@
+// style.scss
+:root{--t_color:#0f0};
+ul > li{color:var(--t_color)};
+
+// scss파일 내용
+$t_color1:#333;
+$m_color:#00f; // 메인컬러
+$sub_color1:#0f0; // 보조컬러
+$bg_color:#ccc; // 배경색
+$line-h:230%; // 줄간격
+
+// 정렬속성 변수
+$alin_c: center;
+
+.p01{
+  color:$t_color1;
+}
+
+pre{background:$bg_color;}
+
+footer{
+  background:$t_color1;
+  color:#fff;
+  text-align:$alin_c;
+  >address{
+  font-style:normal;
+  line-height:$line_h;
+  }
+}

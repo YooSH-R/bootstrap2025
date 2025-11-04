@@ -1,0 +1,52 @@
+/* style2.scss */
+
+//전역변수
+$max_width:1180px;
+
+//12개의 그리드레이아웃 컬럼
+//박스가 가지는 컬럼에 따라 가로크기가 지정되는 함수를 작성하기
+@function column($number:1, $all:12){
+  @return $max_width*($number/$all);
+}
+
+.wrap{
+  width:$max_width;
+  border:3px solid #00f;
+}
+
+.box01, .box02, .box03{
+  height:100px;margin:10px 0px;
+}
+
+//12컬럼에서 1개의 컬럼만 표시됨
+.box01{width:column();background:#f00;}
+.box02{width:column(6);background:#f00;}
+.box03{width:column(12);background:#f00;}
+
+// 내장함수로 버튼 서식 적용하기
+$mainColor:#e134ad;
+$t_color:#fff;
+.btn{
+  border:none;
+  padding:5px 20px;
+  border-radius:5px;
+  background:$mainColor;
+  color:$t_color;
+  &.btn2{
+    background:lighten($mainColor, 20%);
+  }
+}
+
+//내장함수 공식 만들기
+@function my-lighten($num){
+  @return 0.1*$num;
+}
+
+.btn3{opacity: my-lighten(8);}
+.btn4{opacity: my-lighten(6);}
+.btn5{opacity: my-lighten(4);}
+.btn6{opacity: my-lighten(3);}
+.btn7{opacity: my-lighten(2);}
+.btn8{opacity: my-lighten(1);}
+
+

@@ -1,0 +1,16 @@
+@charset "UTF-8";
+/* 메인컬러 */
+/* common.css */
+.more_box {
+  padding-top: 40px;
+  text-align: center;
+}
+
+/* 버튼 서식 */
+a.more_btn {
+  background-color: #fff;
+  font-size: 14px;
+  padding: 6px 20px;
+  border-radius: 10px;
+  color: #2f2f2f;
+}/*# sourceMappingURL=common.css.map */

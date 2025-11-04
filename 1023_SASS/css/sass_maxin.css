@@ -1,0 +1,54 @@
+.toggle_btn {
+  border: 1px solid #ccc;
+  width: 40px;
+  height: 40px;
+  display: block;
+  position: relative;
+  cursor: pointer;
+}
+
+.bar {
+  background: #333;
+  width: 38px;
+  height: 3px;
+  display: inline-block;
+  position: absolute;
+  left: 1px;
+  transition: 0.3s;
+}
+
+.bar1 {
+  top: 5px;
+}
+
+.bar2 {
+  top: 18px;
+}
+
+.bar3 {
+  bottom: 5px;
+}
+
+#toggle:checked + .toggle_btn .bar2 {
+  display: none;
+}
+
+#toggle:checked + .toggle_btn .bar1 {
+  transform: rotate(45deg) translate(10px, 10px);
+}
+
+#toggle:checked + .toggle_btn .bar3 {
+  transform: rotate(-45deg) translate(10px, -10px);
+}
+
+.rotate1 {
+  transform: rotate(45deg) translate(10px, 10px) !important;
+}
+
+.none {
+  display: none !important;
+}
+
+.rotate2 {
+  transform: rotate(-45deg) translate(10px, -10px) !important;
+}/*# sourceMappingURL=sass_maxin.css.map */

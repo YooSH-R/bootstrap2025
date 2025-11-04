@@ -1,0 +1,118 @@
+/* style.scss파일 */
+
+$b_color:#333;//오버전
+$f_color:#f00;//오버후
+$time:0.3s; //시간변수
+
+//sns서식
+@mixin sns{
+  font-size:30px;
+  color:$b_color;
+}
+
+.sns{
+  display:flex;
+  width:200px;
+  justify-content:space-around;
+}
+.sns ul, .sns li{
+  list-style:none;
+  @include sns;
+}
+@mixin hover{
+  color:$f_color;
+  // transition:$time;
+}
+.sns li i{ transition:$time;}
+.sns li:hover i{
+  @include hover;
+  transform:translateY(-5px);
+}
+
+//버튼 믹스인 함수
+@mixin btn($t_color){
+  width:200px;height:40px;
+  border:1px solid #ccc;
+  text-align:center;
+  color:$t_color;
+}
+
+.btn{@include btn(#ccc)}
+
+//매개변수가 있는 믹스인 함수 작성
+@mixin bgcolor($bgcolor){
+  background:$bgcolor;
+}
+
+//sns별 색상서식
+.btn1{@include bgcolor(#f00)}
+.btn2{@include bgcolor(#0f0)}
+.btn3{@include bgcolor(#ff0)}
+
+//실습3. 믹스인 함수에 매개변수값 설정하기(기본값)
+@mixin border_style($w:1px,$s:solid, $c:#ccc){
+  border:$w $s $c;
+}
+
+.list01 > li{@include border_style;}
+.list01 > li:nth-child(2){
+  //@include border_style($s:solid, $c:#f00);
+  @include border_style(4px, double, #f00);
+}
+.list01 > li:nth-child(3){
+  @include border_style(4px, double, #00f);
+}
+.list01 > li:nth-child(4){
+  @include border_style(4px, dotted, #0f0);
+}
+.list01 > li:nth-child(5){
+  @include border_style(4px, dashed, orange);
+}
+
+//마우스 오버시 테두리 색상 검정색, 실선(3px)으로 통일하기
+.list01 li:hover{
+  @include border_style($w:3px, $c:#000);
+}
+
+//달력서식
+@mixin border($w:1px, $s:solid, $c:#ccc){
+  border:$w $s $c;
+}
+
+$t_width:500px; //크기변수
+
+.calender{
+  width:$t_width;
+  border-collapse:collapse;
+  @include border;
+}
+.calender th, .calender td{
+  @include border;
+}
+//캡션서식 = 믹스인 함수
+@mixin t_caption($bg:#ffff00){
+  background:$bg;
+  padding:10px 0px;
+  font-weight:bold;
+}
+//caption에서 서식적용하기
+.calender caption{
+  @include t_caption;
+}
+// 홀수번째 라인 서식
+@mixin odd_tr($bg:#fddc7a){
+  background:$bg;
+}
+@mixin even_tr($bg:#fdeab2){
+  background:$bg;
+}
+
+// 짝수번째 라인 서식
+.calender tr:nth-child(2n){
+  @include even_tr;
+}
+
+// 홀수번째 라인 서식
+.calender tr:nth-child(2n+1){
+  @include odd_tr;
+}

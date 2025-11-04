@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>02_중첩규칙</title>
+  <link href="./css/style2.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+  <h2>02_중첩규칙</h2>
+  <p>중첩이란? 겹치거나 포개기</p>
+  <ol>
+    <li>선택자를 중첩하는 '규칙 중첩'</li>
+    <li>속성을 중첩하는 '속성 중첩'</li>
+  </ol>
+  <p>sass의 nesting(중첩)은 태그가 자손 혹은 후손인 경우 {}코드블록으로 중첩하여 작성하는 기법을 말함</p>
+  <p>css의 경우 부모요소를 반복해서 작성하는데 sass중첩규칙은 부모요소를 반복해서 작성을 안해도 됨.</p>
+  <p>복잡한 구조 형태의 작업에 있어서 상위 선택자를 많이 상속해야 할 경우 css규칙을 간단하게 작성할 수 있으며, 그 구조를 한눈에 볼 수 있게 모듈화 할 수 있다.</p>
+  <p>중첩은 무분별하게 사용하는 것은 권장하지 않는다.</p>
+  <p>상위 선택자를 3Depth이상 사용할 경우 재활용이 제한적이다.(그럴 경우 별도의 클래스를 만들것)</p>
+
+  <div class="list">
+    <h3>SASS의 중첩규칙과 속성</h3>
+    <ul>
+        <li><a href="#" title="">텍스트 링크</a></li>
+        <li><a href="#" title="">텍스트 링크</a></li>
+        <li><a href="#" title="">텍스트 링크</a></li>
+    </ul>
+  </div>
+
+  <!-- 실습하기 -->
+  <article>
+    <h3>실습하기 sass를 활용한 탭콘텐츠</h3>
+    <div class="tab">
+      <div class="tabcon">
+        <!-- 첫번째 이미지 -->
+        <img src="./images/book1.jpg" alt="" id="photo">
+      </div>
+      <ul>
+        <li><a href="./images/book1.jpg" title="" class="act">우리는 언제나 다시 만나</a></li>
+        <li><a href="./images/book2.jpg" title="">느리게 나이 드는 습관</a></li>
+        <li><a href="./images/book3.jpg" title="">너에게 들려주는 단단한 말</a></li>
+        <li><a href="./images/book4.jpg" title="">꽃을 보듯 너를 본다 </a></li>
+      </ul>
+    </div>
+  </article>
+
+  <!-- 방법1.  자바스크립트로 구현 -->
+  <script>
+    //1. 탭메뉴 변수 선언 
+    // let tmnu = document.querySelectorAll('.tab ul > li');
+    // const photo = document.getElementById('photo');
+
+    //2. 마우스 오버 이벤트
+    // for(let i=0;i<tmnu.length;i++){
+    //  tmnu[i].querySelector('a').addEventListener('mouseenter', function(){
+    //   console.log(i); //0,1,2,3까지 숫자 체크
+
+        //a태그 모두 act서식 제거하고
+     //   for(let j=0;j<tmnu.length;j++){
+     //     tmnu[j].querySelector('a').classList.remove('act');
+    //    }
+
+        //마우스 올린 a요소에만 서식을 적용
+    //    tmnu[i].querySelector('a').classList.add('act');
+
+        //해당 i번째 이미지가 나오도록 img속성값(href) 변경하기
+    //    let src = tmnu[i].querySelector('a').href;
+    //    console.log(src); //href속성값 출력해보기
+
+    //    photo.src=src; //이미지 속성값 대입하여 이미지 변경하기
+   //   });
+   // }
+
+  </script>
+
+  <!-- 방법2. 제이쿼리로 구현 -->
+  <!-- 제이쿼리 라이브러리 연결 -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  <script>
+    $(document).ready(function(){
+      //1. 변수선언
+      let tmnu2 = $('.tab ul > li > a'); //jquery
+      const photo2 = $('#photo'); //jquery
+
+      //2. 마우스 오버 이벤트
+      tmnu2.mouseenter(function(){
+        //a에 적용된 모든 act서식 제거
+        $('.tab ul > li > a').removeClass('act');
+
+        $(this).addClass('act'); //마우스 올린 대상의 메뉴에 서식적용
+        let src = $(this).attr('href'); //속성값을 변수에 담는다.
+
+        //src속성값을 이미지 src에 적용하여 이미지가 변경되도록한다.
+        photo2.attr('src',src);
+      });
+
+    });
+  </script>
+
+</body>
+</html>

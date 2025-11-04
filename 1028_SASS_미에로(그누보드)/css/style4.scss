@@ -1,0 +1,98 @@
+
+//style4.scss
+div{
+  height:50px;
+  margin-bottom:10px;
+  background:pink;
+}
+
+//1부터 5까지 반복실행
+// @for $i from 1 to 6{
+//   div:nth-of-type(#{$i}){
+//     width:50px*$i; //50씩 증가
+//     /*
+//       50*1=50
+//       50*2=100
+//       50*3=150
+//       50*4=200
+//       50*5=250
+//     */
+//   }
+// }
+
+@for $i from 1 through 6{
+  div:nth-of-type(#{$i}){
+    width:100px*$i; //50씩 증가
+  }
+}
+
+// 스타벅스 질문과 답변 서식
+$s_buck_color:#006633;
+$s_buck_bgcolor:#f4f4f2;
+
+.qna *{margin:0px;padding:0px;}
+.qna{
+  width:100%;padding:20px;
+  border:1px solid #333;
+  font-size:16px;
+  box-sizing: border-box;
+}
+.qna > h3{
+  font-size:30px;
+  line-height:40px;
+  margin-bottom:30px;
+}
+.qna > p{line-height:40px;}
+.qna > .searchbox{
+  background-color:$s_buck_bgcolor;text-align:right;
+  line-height:60px;
+}
+.qna > .searchbox > input{
+  border-style:none;
+  border:1px solid #ccc;
+  height:30px;width:300px;
+}
+.qna > .searchbox > label{
+  background-color:#4d4d4d;color:#fff;
+  padding:5px 10px;
+  margin:0px 10px;
+  border-radius:3px;
+}
+.qna dl{
+  margin-top:30px;
+  padding-top:10px;
+  border-top:1px solid #333;
+  border-bottom:1px solid #333;
+  text-indent:10px;
+}
+.qna dt{
+  line-height:60px;
+  border-bottom:1px solid #ccc;
+  cursor:pointer;
+}
+.qna dt i.fas{
+  color:#333;
+  float:right;
+  font-size:20px;
+  padding:15px 20px 0px 20px;
+}
+.qna dd{
+  padding:26px 0px;
+  display:none;/* 답변은 안보이게 */
+}
+.act{
+  transform: rotate(180deg) translate(-10px, -14px)!important;
+}
+
+// 스타벅스 질문과 답변 서식
+@for $j from 1 through 11{
+  dt:nth-of-type(#{$j}){
+    color:$s_buck_color;
+  }
+  dd:nth-of-type(#{$j}){
+    background:$s_buck_bgcolor;
+  }
+}
+
+
+

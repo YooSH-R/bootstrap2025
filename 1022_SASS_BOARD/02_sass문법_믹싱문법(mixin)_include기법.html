@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>02_sass문법_믹싱문법(mixin)_include기법</title>
+  <!-- 외부스타일 서식 -->
+  <link href="./css/style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+  <h2 class="title2">02_sass문법_믹싱문법(mixin)_include기법.html</h2>
+  <h3 class="title3">1. $mixin기법</h3>
+  <p>웹페이지 전체에 재사용할 css코드들 정의하는 문법</p>
+  <pre>
+    @mixin mixin명{
+      // 반복해서 사용할 스타일 서식을 지정한다.
+    }
+  </pre>
+
+  <p>실습1. h2, h3태그요소에 클래스명을 2개 작성하여 동일한 서식과 다른 서식 적용해보기</p>
+
+  <p>실습2. mixin기법을 활용하여 ...생략기호 나오게 하기</p>
+
+  <p class="p01">믹스인 함수(txt_over)를 사용하여 글자 생략기호 나오게하기</p>
+
+  <h3 class="title3">2. @include문법</h3>
+
+  <h3 class="title3">3. @mixin을 중첩하여 새로운 @mixin만들기</h3>
+
+  <pre>
+    @mixin 믹스인명 A{
+      // 재사용할 스타일 서식
+    }
+
+    @mixin 믹스인명 B{
+      //재사용할 스타일 서식
+    }
+
+    @mixin 믹스인명 C{
+      @include 믹스인명 A;
+      @include 믹스인명 B;
+    }
+  </pre>
+
+  <input type="reset" value="취소" class="btn btn_w">
+  <input type="button" value="장바구니" class="btn btn_c">
+</body>
+</html>

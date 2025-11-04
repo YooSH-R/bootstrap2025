@@ -1,0 +1,31 @@
+@charset "UTF-8";
+/* import.scss */
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap");
+/* style.sass 
+  스타일 가이드에서 설정된 색상값, 글꼴에 관련된 서식값, 링크에 관련된 서식값
+*/
+body {
+  font-family: "맑은 고딕", arial, sans-serif;
+  font-size: 12px;
+  color: #333;
+}
+
+h1 {
+  font-size: 30px;
+  text-align: center;
+}
+
+#wrap {
+  width: 1280px;
+  height: 300px;
+  background: #ffff00;
+  border: 1px solid #0f0;
+  margin: 0px auto;
+}
+
+h2 {
+  font-family: "Noto Sans KR";
+  font-size: 26px;
+  color: #00f;
+  background-color: #ccc;
+}/*# sourceMappingURL=import.css.map */

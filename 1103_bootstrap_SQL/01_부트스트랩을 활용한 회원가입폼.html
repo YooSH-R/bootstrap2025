@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>01_부트스트랩을 활용한 회원가입폼</title>
+  <!-- 1. 부트스트랩 css cdn주소 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- 2. 부트스트랩 js cdn주소-->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+  <style>
+    body {
+      background: linear-gradient(135deg, #4e74df, #224abe);
+      height: 100vh;
+      /* 부모에 flex속성 적용해서 자식 가운데로 배치하기 */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .card {
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, .2);
+      width: 100%;
+      max-width: 500px;
+    }
+
+    h2 {
+      font-size: 22px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="card p-4">
+    <h2 class="text-center mb-4">01_부트스트랩을 활용한 회원가입폼</h2>
+    <div class="row">
+      <div class="col mb-3">
+        <label for="name" class="mb-2">이름</label>
+        <input type="text" id="name" class="form-control" placeholder="이름">
+      </div>
+      <div class="col mb-3">
+        <label for="nickname" class="mb-2">별명</label>
+        <input type="text" id="nickname" class="form-control" placeholder="별명">
+      </div>
+    </div>
+    <div class="mb-3">
+      <label for="email" class="mb-2">이메일</label>
+      <input type="email" id="email" class="form-control" placeholder="you@example.com">
+    </div>
+    <div class="mb-3">
+      <label for="address" class="mb-2">주소</label>
+      <input type="text" id="address" class="form-control" placeholder="서울특별시 강남구">
+    </div>
+    <div class="mb-3">
+      <label for="detailAddress" class="mb-2">상세주소 <span class="text-muted">(필수아님)</span></label>
+      <input type="text" id="detailAddress" class="form-control" placeholder="상세주소를 입력해주세요.">
+    </div>
+    <div class="row  mb-4">
+      <div class="col-8">
+        <label for="route" class="mb-2">가입경로</label>
+        <select class="form-select" id="route">
+          <option>선택</option>
+          <option>지인추천</option>
+          <option>광고</option>
+          <option>기타</option>
+        </select>
+      </div>
+      <div class="col-4">
+        <label for="code" class="mb-2">추천인코드</label>
+        <input type="text" id="code" class="form-control">
+      </div>
+    </div>
+    <div class="border-top pt-3">
+      <input type="checkbox" id="agree" class="form-check-input mb-4">
+      <label for="agree" class="form-check-label">개인정보 수집 및 이용에 동의합니다.</label>
+    </div>
+    <input type="submit" value="가입완료" class="btn btn-primary w-100">
+  </div>
+
+  <form>
+
+  </form>
+</body>
+
+</html>

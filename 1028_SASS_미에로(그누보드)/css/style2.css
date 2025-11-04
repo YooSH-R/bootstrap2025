@@ -1,0 +1,60 @@
+/* style2.scss */
+.wrap {
+  width: 1180px;
+  border: 3px solid #00f;
+}
+
+.box01, .box02, .box03 {
+  height: 100px;
+  margin: 10px 0px;
+}
+
+.box01 {
+  width: 98.3333333333px;
+  background: #f00;
+}
+
+.box02 {
+  width: 590px;
+  background: #f00;
+}
+
+.box03 {
+  width: 1180px;
+  background: #f00;
+}
+
+.btn {
+  border: none;
+  padding: 5px 20px;
+  border-radius: 5px;
+  background: #e134ad;
+  color: #fff;
+}
+.btn.btn2 {
+  background: rgb(238.1330472103, 140.8669527897, 208.8969957082);
+}
+
+.btn3 {
+  opacity: 0.8;
+}
+
+.btn4 {
+  opacity: 0.6;
+}
+
+.btn5 {
+  opacity: 0.4;
+}
+
+.btn6 {
+  opacity: 0.3;
+}
+
+.btn7 {
+  opacity: 0.2;
+}
+
+.btn8 {
+  opacity: 0.1;
+}/*# sourceMappingURL=style2.css.map */

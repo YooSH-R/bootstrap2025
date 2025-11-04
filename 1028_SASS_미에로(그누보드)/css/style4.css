@@ -1,0 +1,192 @@
+@charset "UTF-8";
+div {
+  height: 50px;
+  margin-bottom: 10px;
+  background: pink;
+}
+
+div:nth-of-type(1) {
+  width: 100px;
+}
+
+div:nth-of-type(2) {
+  width: 200px;
+}
+
+div:nth-of-type(3) {
+  width: 300px;
+}
+
+div:nth-of-type(4) {
+  width: 400px;
+}
+
+div:nth-of-type(5) {
+  width: 500px;
+}
+
+div:nth-of-type(6) {
+  width: 600px;
+}
+
+.qna * {
+  margin: 0px;
+  padding: 0px;
+}
+
+.qna {
+  width: 100%;
+  padding: 20px;
+  border: 1px solid #333;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+.qna > h3 {
+  font-size: 30px;
+  line-height: 40px;
+  margin-bottom: 30px;
+}
+
+.qna > p {
+  line-height: 40px;
+}
+
+.qna > .searchbox {
+  background-color: #f4f4f2;
+  text-align: right;
+  line-height: 60px;
+}
+
+.qna > .searchbox > input {
+  border-style: none;
+  border: 1px solid #ccc;
+  height: 30px;
+  width: 300px;
+}
+
+.qna > .searchbox > label {
+  background-color: #4d4d4d;
+  color: #fff;
+  padding: 5px 10px;
+  margin: 0px 10px;
+  border-radius: 3px;
+}
+
+.qna dl {
+  margin-top: 30px;
+  padding-top: 10px;
+  border-top: 1px solid #333;
+  border-bottom: 1px solid #333;
+  text-indent: 10px;
+}
+
+.qna dt {
+  line-height: 60px;
+  border-bottom: 1px solid #ccc;
+  cursor: pointer;
+}
+
+.qna dt i.fas {
+  color: #333;
+  float: right;
+  font-size: 20px;
+  padding: 15px 20px 0px 20px;
+}
+
+.qna dd {
+  padding: 26px 0px;
+  display: none; /* 답변은 안보이게 */
+}
+
+.act {
+  transform: rotate(180deg) translate(-10px, -14px) !important;
+}
+
+dt:nth-of-type(1) {
+  color: #006633;
+}
+
+dd:nth-of-type(1) {
+  background: #f4f4f2;
+}
+
+dt:nth-of-type(2) {
+  color: #006633;
+}
+
+dd:nth-of-type(2) {
+  background: #f4f4f2;
+}
+
+dt:nth-of-type(3) {
+  color: #006633;
+}
+
+dd:nth-of-type(3) {
+  background: #f4f4f2;
+}
+
+dt:nth-of-type(4) {
+  color: #006633;
+}
+
+dd:nth-of-type(4) {
+  background: #f4f4f2;
+}
+
+dt:nth-of-type(5) {
+  color: #006633;
+}
+
+dd:nth-of-type(5) {
+  background: #f4f4f2;
+}
+
+dt:nth-of-type(6) {
+  color: #006633;
+}
+
+dd:nth-of-type(6) {
+  background: #f4f4f2;
+}
+
+dt:nth-of-type(7) {
+  color: #006633;
+}
+
+dd:nth-of-type(7) {
+  background: #f4f4f2;
+}
+
+dt:nth-of-type(8) {
+  color: #006633;
+}
+
+dd:nth-of-type(8) {
+  background: #f4f4f2;
+}
+
+dt:nth-of-type(9) {
+  color: #006633;
+}
+
+dd:nth-of-type(9) {
+  background: #f4f4f2;
+}
+
+dt:nth-of-type(10) {
+  color: #006633;
+}
+
+dd:nth-of-type(10) {
+  background: #f4f4f2;
+}
+
+dt:nth-of-type(11) {
+  color: #006633;
+}
+
+dd:nth-of-type(11) {
+  background: #f4f4f2;
+}/*# sourceMappingURL=style4.css.map */

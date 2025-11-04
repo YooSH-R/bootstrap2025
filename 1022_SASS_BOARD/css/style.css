@@ -1,0 +1,50 @@
+@charset "UTF-8";
+/* 기본 크기 */
+/* 메뉴 크기 */
+/* 큰제목 */
+/* 작은제목 */
+body {
+  font-family: "맑은 고딕", arial, sans-serif;
+  font-size: 12px;
+  color: #333;
+}
+
+h2 {
+  font-family: "noto Sans KR", serif;
+  font-size: 20px;
+  color: #00f;
+}
+
+h3 {
+  font-size: 18px;
+  color: #f00;
+  line-height: 40px;
+}
+
+.p01 {
+  width: 300px;
+  border: 1px solid #333;
+  background: #ff0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.btn {
+  font-family: "Noto Sans";
+  font-weight: bold;
+  font-size: 16px;
+  border: 1px solid #333;
+  padding: 0 10px;
+  width: 170px;
+  height: 56px;
+}
+
+.btn_w {
+  background: #fff;
+}
+
+.btn_c {
+  color: #fff;
+  background: rgb(144, 24, 160);
+}/*# sourceMappingURL=style.css.map */

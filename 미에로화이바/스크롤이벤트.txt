@@ -1,0 +1,8 @@
+$(window).scroll(function(){
+   let s_height = $(this).scrollTop;
+
+   if(s_height)>=300{
+      // 비동기 방식으로 데이터를 불러온다.
+
+   }
+})

@@ -1,0 +1,47 @@
+@charset "utf-8";
+
+// style3.scss
+$width1:1200px;
+$width2:1024px; /* 태블릿 큰거 */
+$width3:390px;
+$width4:768px; /* 태블릿 작은거 */
+
+//div 기본서식
+@mixin box{
+  height:50px;
+  border:3px solid #000;
+  margin-bottom:20px;
+}
+//div 서식 적용하기
+div{@include box};
+.pc{
+  width:$width1;
+  background:if($width1>500, pink, lightblue);
+}
+.tablet{
+  width:$width2;
+  background:if($width2>500, pink, lightblue);
+}
+.mobile{
+  width:$width3;
+  background:if($width3>500, pink, lightblue);
+}
+
+.box03{
+  width:$width4; //768
+  @if($width4>=767){
+    background:pink;
+  }@else{
+    background:lightblue;
+  }
+}
+
+.box04{
+  width:$width2; //1024
+  @if($width2>=1024){
+    background:#ffff00;
+  }@else{
+    background:#ccc;
+  }
+}
+

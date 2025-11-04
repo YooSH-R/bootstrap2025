@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>01_sass소개와 문법</title>
+</head>
+<body>
+  <h2>01_sass소개와 문법</h2>
+  <p class="p01">SASS - Syntactically Awesome StyleSheets의 줄임말</p>
+  <p>SCSS - Sassy CSS의 줄임말</p>
+  <p>CSS pre-processor(전처리기)로서 css반복을 줄여서 시간을 절약할 수 있도록 해주는 css언어의 확장 언어이다.</p>
+  <p>css를 좀 더 효율적으로 작성하고 유지보수하기 쉽게 만들어준다.</p>
+  <p>장점 - 변수 및 조건문 등의 새로운 문법을 통해 css를 구조화하여 작업할 수 있다.</p>
+  <p>단점 - 코드가 지저분해질 수 있고, 코드가 많아질수록 유지보수가 어렵다.</p>
+  <p>프로그램 설치는 sass공식사이트에서 gui, cli방식의 프로그램들 중에서 자신이 편한 프로그램을 다운받아 설치한다.</p>
+  <p>vs code에서는 별도로 확장프로그램(live sass compiler)을 지원하기 때문에 왼쪽 메뉴 아이콘 'extension'을 클릭하여 설치, 사용한다.</p>
+  
+  <h3>1. sass, scss문법 차이</h3>
+  <dl>
+    <dt>SASS문법</dt>
+    <dd>중괄호({}와 세미콜론(;)이 필요없습니다.)</dd>
+    <dd>들여쓰기(tab키)를 사용하여 코드 구조를 나타냅니다.</dd>
+    <dd>구문이 더 간결하고 Python스타일과 비슷합니다.</dd>
+  </dl>
+
+  <!-- <style>
+    :root{
+      --main-color01:#0f0;
+    }
+    body{background:var(--main-color01);}
+  </style> -->
+
+  <link href="./css/style.css" rel="stylesheet" type="text/css">
+  <pre>
+    sass 작성 예시)
+    $primary-color:#3498db;
+    body
+      background:$primary-color;
+      color:#fff;
+
+    nav
+      ul
+        margin:0
+        padding:0
+        list-style:none
+      li
+        display:inline-block
+        margin-right:10px;
+  </pre>
+
+  <dl>
+    <dt>SCSS문법</dt>
+    <dd>CSS문법과 매우 유사합니다.</dd>
+    <dd>중괄호({})와 세미콜론(;)을 사용합니다.</dd>
+    <dd>기존 CSS와 호환성이 높습니다.</dd>
+  </dl>
+
+  
+  <pre>
+    scss 작성 예시)
+    $primary-color:#3498db;
+    body{
+      background:$primary-color;
+      color:#fff;
+    }
+    nav{
+      ul{
+        margin:0;
+        padding:0;
+        list-style:none;
+      }
+      li{
+        display:inline-block;
+        margin-right:10px;
+      }
+    }
+  </pre>
+  <h3>둘 중 어느것을 작성하는게 좋을까?</h3>
+  <dl>
+    <dt>SCSS권장:</dt>
+    <dd>CSS와 문법이 거의 같아 기존 CSS 파일과 통합하기 쉽습니다.</dd>
+    <dd>팀원들이 CSS에 익숙하다면 SCSS가 더 쉽게 받아들여질 수 있습니다.</dd>
+    <dd>최신 문법과 기능이 주로 SCSS에서 지원되며, SASS는 유지 보수용으로만 사용됩니다.</dd>
+    <dd>SASS공식 문서에서도 SCSS사용을 권장하고 있습니다.</dd>
+
+    <dt>SASS사용이유: </dt>
+    <dd>더 간결한 문법을 선호하거나, 기존 SASS 스타일을 유지해야 하는 프로젝트에 유리합니다.</dd>
+
+    <dt>결론</dt>
+    <dd>SCSS를 사용하는 것을 권장</dd>
+    <dd>더 널리 사용되며, 유지보수 및 협업에 유리하다.</dd>
+    <dd>최신 기능 지원 및 CSS와의 호환성도 뛰어납니다.</dd>
+  </dl>
+
+  <ol>
+    <li>sass소개와 문법, live sass compiler</li>
+    <li>변수의 개념: $변수명</li>
+    <li>@mixin 믹스인명, @include 믹스인명</li>
+    <li>@mixin 믹스인명($변수명:값), @include 믹스인명($변수명:값)</li>
+    <li>중첩규칙(nesting)</li>
+    <li>@import</li>
+    <li>함수(@function)</li>
+    <li>조건문(@if, @else, @else if)</li>
+    <li>반복문(@for, @while)</li>
+  </ol>
+
+  <footer>
+    <address>Copyright&copy;2025 000 allrights reserved.</address>
+  </footer>
+</body>
+</html>
