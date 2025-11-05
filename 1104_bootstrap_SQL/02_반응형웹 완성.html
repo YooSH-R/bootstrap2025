@@ -16,8 +16,13 @@
       overflow-x: hidden;
     }
 
+    .logo-wrapper{
+      height:50px;
+      line-height:50px;
+    }
+
     .logo {
-      height: 50px;
+      height: 25px;
     }
 
     #myCarousel {
@@ -136,11 +141,11 @@
   <!-- 상단헤더영역 -->
   <header>
     <!-- 내비게이션 바 -->
-    <nav class="navbar navbar-dark bg-dark navbar-expand-md" aria-label="내비게이션바">
+    <nav class="navbar navbar-dark bg-light navbar-expand-md" aria-label="내비게이션바">
       <!-- container-fluid : 반응형 -->
       <div class="container-fluid">
-        <a href="#" title="부트스트랩 로고">
-          <img src="./images/bootstrap-logo-shadow.png" alt="" class="logo">
+        <a href="#" title="부트스트랩 로고" class="logo-wrapper">
+          <img src="./images/logo.svg" alt="" class="logo mx-5">
         </a>
 
         <!-- 모바일 해상도일 경우 나오는 전체메뉴 버튼 -->
@@ -150,25 +155,44 @@
 
         <!-- 가로메뉴 -->
         <div class="collapse navbar-collapse" id="menu">
-          <ul class="navbar-nav me-auto mb-2 mb-md-0">
-            <li class="nav-item">
-              <a href="#" title="" class="nav-link active">Home</a>
-            </li>
-            <li class="nav-item">
-              <a href="#" title="" class="nav-link">Menu</a>
-            </li>
-            <li class="nav-item">
-              <a href="#" title="" class="nav-link disabled">Disabled</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a href="#" title="" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">드롭다운</a>
+          <ul class="navbar-nav me-auto mb-md-0">
+            <li class="nav-item dropdown mx-2">
+              <a href="#" title="" class="nav-link dropdown-toggle text-dark" data-bs-toggle="dropdown">카테고리</a>
               <ul class="dropdown-menu">
-                <li><a href="#" title="" class="dropdown-item">menu1</a></li>
-                <li><a href="#" title="" class="dropdown-item">menu2</a></li>
-                <li><a href="#" title="" class="dropdown-item">menu3</a></li>
-                <li><a href="#" title="" class="dropdown-item">menu4</a></li>
+                <li><a href="#" title="" class="dropdown-item">전체</a></li>
+                <li><a href="#" title="" class="dropdown-item">리뷰</a></li>
+                <li><a href="#" title="" class="dropdown-item">배너</a></li>
               </ul>
             </li>
+            <li class="nav-item dropdown mx-2">
+              <a href="#" title="" class="nav-link dropdown-toggle text-dark" data-bs-toggle="dropdown">기획전</a>
+              <ul class="dropdown-menu">
+                <li><a href="#" title="" class="dropdown-item">[패션/의류] 몰 인기 앱</a></li>
+                <li><a href="#" title="" class="dropdown-item">[식품/건강] 몰 인기 앱</a></li>
+                <li><a href="#" title="" class="dropdown-item">[뷰티/화장품] 몰 인기 앱</a></li>
+                <li><a href="#" title="" class="dropdown-item">[홈&리빙] 몰 인기 앱</a></li>
+              </ul>
+            </li>
+            <li class="nav-item mx-2">
+              <a href="#" title="" class="nav-link text-dark">리뷰</a>
+            </li>
+            <li class="nav-item mx-2">
+              <a href="#" title="" class="nav-link text-dark">스토리</a>
+            </li>
+            <li class="nav-item mx-2">
+              <a href="#" title="" class="nav-link text-dark">디자인</a>
+            </li>
+            <li class="nav-item mx-2">
+              <a href="#" title="" class="nav-link text-dark">엑스퍼트</a>
+            </li>
+            <li class="nav-item dropdown mx-2">
+              <a href="#" title="" class="nav-link dropdown-toggle text-dark" data-bs-toggle="dropdown">관련서비스</a>
+              <ul class="dropdown-menu">
+                <li><a href="#" title="" class="dropdown-item">쇼핑몰 관리자</a></li>
+                <li><a href="#" title="" class="dropdown-item">파트너센터</a></li>
+                <li><a href="#" title="" class="dropdown-item">개발자센터</a></li>
+                <li><a href="#" title="" class="dropdown-item">업무마켓9</a></li>
+              </ul>
           </ul>
           <!-- 검색폼 -->
           <form role="search">
