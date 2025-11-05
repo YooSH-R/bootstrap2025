@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>01_반응형 내비게이션과 웹</title>
+  <title>02_반응형웹 완성</title>
   <!-- 1. 부트스트랩 css cdn주소 -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
 
@@ -13,7 +13,7 @@
 
   <style>
     main {
-      overflow-y: hidden;
+      overflow-x: hidden;
     }
 
     .logo {
@@ -21,24 +21,51 @@
     }
 
     #myCarousel {
-      height: 90vh;
+      height: 43vw;
     }
 
     .carousel-item {
       position: relative;
-      height: 90vh;
-      margin-bottom: 10px;
+      height: 43vw;
     }
 
     .carousel-item h3 {
+      font-weight: bold;
       position: absolute;
       z-index: 100;
-      font-size: 1.5rem;
+      font-size: 2.5rem;
       color: #fff;
-      left: 50%;
-      top: 50%;
-      transform: translate(-50%, -50%);
     }
+
+    .carousel-item p {
+      position: absolute;
+      z-index: 100;
+      color: #fff;
+    }
+
+    .carousel-item:first-child h3 {
+      left: 50%;
+      top: 20%;
+      transform: translate(-50%);
+      white-space: nowrap;
+    }
+
+    .carousel-item:nth-child(2) h3 {
+      left: 15%;
+      top: 20%;
+    }
+
+    .carousel-item:nth-child(2) p {
+      left: 15%;
+      top: 30%;
+      font-size: 1.35rem;
+    }
+
+    .carousel-item:last-child h3 {
+      left: 15%;
+      top: 20%;
+    }
+
 
     .carousel-item img {
       width: 100%;
@@ -46,13 +73,58 @@
 
     /* 점보트론 */
     .jumbotron {
-      padding-bottom: 25px;
+      padding-top: 50px;
+      padding-bottom: 50px;
       margin-bottom: 50px;
     }
 
     .jumbotron h2 {
-      font-size: 6rem;
       margin-bottom: 20px;
+      font-weight: bold;
+    }
+
+    .jumbotron .txt01 {
+      font-size: 3rem;
+      font-weight: bold;
+    }
+
+    /* 2번 콘텐츠 서식 */
+    .cont2-con {
+      padding-top: 30px;
+    }
+
+    .cont2 img {
+      border-radius: 50%;
+    }
+
+    .cont2 h2 {
+      font-weight: bold;
+      font-size: 1.25rem;
+    }
+
+    .cont2 p {
+      font-size: 0.8rem;
+    }
+
+    /* 4번 콘텐츠 서식 */
+    .cont4 img {
+      width: 100%;
+    }
+
+    .cont4 h3 {
+      font-size: 1.25rem;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .cont4 p {
+      font-size: 0.8rem;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
   </style>
 </head>
@@ -122,8 +194,8 @@
 
   <!-- 메인콘텐츠 영역 -->
   <main>
-    <!-- 메인슬라이드 -->
-    <article id="myCarousel" class="carousel slide mb-6" data-bs-ride="carousel">
+    <!-- 1. 메인슬라이드 -->
+    <article id="myCarousel" class="carousel slide" data-bs-ride="carousel">
       <!-- 컨트롤 버튼 -->
       <div class="carousel-indicators">
         <button type="button" class="active" aria-label="slide1" data-bs-target="#myCarousel" data-bs-slide-to="0"
@@ -135,15 +207,16 @@
       <!-- 슬라이드 박스 -->
       <div class="carousel_inner">
         <div class="carousel-item active">
-          <h3>타이틀</h3>
+          <h3>블랙프라이데이 프로모션? 5분이면 끝나요</h3>
           <img src="./images/slide1.png" alt="1">
         </div>
         <div class="carousel-item">
-          <h3>타이틀</h3>
-          <img src="./images/slide2.png" alt="2">
+          <h3>매출 상승의 핵심 전략</h3>
+          <p>CRM으로 매출과 고객을 동시에, 스냅푸시</p>
+          <img src="./images/slide2.jpg" alt="2">
         </div>
         <div class="carousel-item">
-          <h3>타이틀</h3>
+          <h3>디테일은 역시 영상으로 봐야죠</h3>
           <img src="./images/slide3.png" alt="3">
         </div>
       </div>
@@ -161,28 +234,83 @@
       </button>
     </article>
 
-    <!-- 점보트론 -->
-    <article class="container p-5">
-      <div class="jumbotron text-center bg-body-tertiary rounded-3">
-        <h2>광고문구 title</h2>
-        <p>점보트론은 대형 스크린 TV의 상표명이자, 대형 전광판을 통칭하는 말입니다.<br>
-          블로그형 홈페이지에서 자주 사용되며, 회사 이미지나 사진을 첨부해놓고 그 위에 메뉴를 만드는 경우가 있습니다.<br>
-          중요한 정보를 적어놓은 쇼케이스를 메뉴 밑에다가 두는 경우가 많은데요, 이걸 부트스트랩에서 적용을 하려면 점보트론이 필요합니다.</p>
-        <p><a href="#" title="" class="btn btn-primary btn-lg">더보기</a></p>
+    <!-- 2. 가로 3단 목록 콘텐츠 -->
+    <article class="container my-5 cont2-con">
+      <div class="row cont2">
+        <div class="col-lg-4 text-center">
+          <img src="./images/cont2-img1.png" alt="">
+          <h2 class="my-3">이프두 마케팅 자동화</h2>
+          <p>고객 여정별 맞춤 메시지를 자동으로 띄우는 AI 마케팅 자동화.</p>
+        </div>
+        <div class="col-lg-4 text-center">
+          <img src="./images/cont2-img2.png" alt="">
+          <h2 class="my-3">아크로스CRM</h2>
+          <p>30일무료 | 온사이트, 친구톡, 알림톡, 문자</p>
+        </div>
+        <div class="col-lg-4 text-center">
+          <img src="./images/cont2-img3.png" alt="">
+          <h2 class="my-3">알파업셀</h2>
+          <p>AI상품추천 / 구매버튼팝업 / 추가구매 유도</p>
+        </div>
       </div>
     </article>
+
+    <!-- 3. 점보트론 -->
+    <article class="container">
+      <div class="jumbotron text-center bg-body-tertiary rounded-3">
+        <h2>아직 쇼핑몰이 없으신가요?</h2>
+        <p class="txt01">지금 바로 무료로 만들어보세요.</p>
+        <p class="text-secondary my-5">이미 쇼핑몰 계정이 있으신가요? <a href="#" title="로그인">로그인</a></p>
+        <p><a href="#" title="" class="btn btn-primary btn-lg">무료 쇼핑몰 만들기</a></p>
+      </div>
+    </article>
+
+    <!-- 4. 가로 4단 목록 콘텐츠 -->
+    <article class="container p-5 cont4">
+      <div class="row">
+        <h2 class="mb-3">신규출시</h2>
+        <div class="col-xs-12 col-sm-6 col-md-3">
+          <img src="./images/cont_img1.png" alt="">
+          <h3 class="mt-3">소스링크 - 어필리에이트 마케팅</h3>
+          <p class="text-secondary">소스링크 앱을 설치하면 복잡한 설정 없이 상품 링크가 자동 추적되고, 클릭&middot;구매 전환&middot;매출까지 성과 데이터가 분석됩니다.
+          </p>
+          <a href="#" role="button" title="더보기" class="btn btn-light btn-line">더보기</a>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-3">
+          <img src="./images/cont_img2.png" alt="">
+          <h3 class="mt-3">쿠폰 리워드 마케팅+ (CRM PLUS)</h3>
+          <p class="text-secondary">매출 상승을 위한 전략, 신규 고객 유치부터 충성 고객 확보까지 모바일 쿠폰 발송 캠페인으로 한 번에 해결하세요.</p>
+          <a href="#" role="button" title="더보기" class="btn btn-light btn-line">더보기</a>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-3">
+          <img src="./images/cont_img3.png" alt="">
+          <h3 class="mt-3">실시간 인기검색어, 최근검색어 - 서치픽 라이트</h3>
+          <p class="text-secondary">서치픽라이트(SearchPick Lite)는 검색UX를 향상시키기 위한 경량형 검색 UI플러그인입니다.</p>
+          <a href="#" role="button" title="더보기" class="btn btn-light btn-line">더보기</a>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-3">
+          <img src="./images/cont_img4.jpg" alt="">
+          <h3 class="mt-3">클립팝 - 유튜브 숏츠</h3>
+          <p class="text-secondary">유튜브 영상 플레이어를 쉽고 빠르게 원하는 대로 무제한!</p>
+          <a href="#" role="button" title="더보기" class="btn btn-light btn-line">더보기</a>
+        </div>
+      </div>
+    </article>
+
   </main>
 
   <!-- 하단푸터 영역 -->
-  <footer class="container bg-dark pt-3 pb-3">
-    <div class="float-end">
-      <a href="#" title="위로 바로가기" class="link-light text-decoration-none">Top</a>
+  <footer class="bg-dark py-3">
+    <div class="container">
+      <div class="float-end">
+        <a href="#" title="위로 바로가기" class="link-light text-decoration-none">Top</a>
+      </div>
+      <p class="text-secondary">&copy;2025 Company, Inc. &middot;
+        <a href="#" title="이용약관" class="link-light text-decoration-none">Privacy</a>
+        &middot;
+        <a href="#" titl="정보" class="link-light text-decoration-none">Terms</a>
+      </p>
     </div>
-    <p class="text-secondary">&copy;2025 Company, Inc. &middot;
-      <a href="#" title="이용약관" class="link-light text-decoration-none">Privacy</a>
-      &middot;
-      <a href="#" titl="정보" class="link-light text-decoration-none">Terms</a>
-    </p>
   </footer>
 </body>
 

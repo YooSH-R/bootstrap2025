@@ -26,5 +26,5 @@ git config --global --list
 ---------------------------------------------------
 수정하고, 다시 업로드하는 경우
 6)git add .
-8)git commit -m
+8)git commit -m '기록할 메세지 내용'
 13) git push origin +main 

@@ -1,0 +1,67 @@
+----------------------------------------------------------
+// 1. 테이블 조회하기(show)
+show tables;
+
+// 2. 테이블 데이터 입력(insert into)
+insert into customer values('레스토랑 가야', '강남구 역삼동 3번지', '02-1258-9956');
+
+// 3. 테이블 데이터 조회
+select * from 테이블명;
+
+// 4. goods테이블 생성하기
+create table goods (g_code int(11), g_name varchar(20), g_cost int(11));
+
+// 5. 테이블 데이터 입력하기(insert)
+insert into goods values(10, '만두세트', 300);
+insert into goods values(12, '해물국수세트', 880);
+insert into goods values(15, '냉동한식세트', 750);
+insert into goods values(22, '중국식만두', 200);
+insert into goods values(25, '꼬마만두', 250);
+insert into goods values(36, '보리빵', 300);
+insert into goods values(57, '녹차', 50);
+insert into goods values(68, '우롱차', 80);
+
+// 6. 테이블 데이터 삭제(조건식)
+delete from goods where g_name='만두세트';
+----------------------------------------------------------
+데이터 조회하기
+
+select * from 테이블명;
+----------------------------------------------------------
+// 7. order 테이블 만들기
+create table orders (o_day varchar(20), c_name varchar(20), g_code int(11), o_num int(11));
+
+// 8. 테이블 데이터 삽입하기(insert into)
+insert into orders values('25--03--01', '부바레스토랑', 10, 10);
+insert into orders values('25--03--02', '레스토랑가야', 22, 12);
+insert into orders values('25--03--02', '동경반점', 15, 12);
+insert into orders values('25--03--03', '서강대교식당', 68, 4);
+insert into orders values('25--03--04', '부바레스토랑', 57, 15);
+insert into orders values('25--03--05', '동경반점', 25, 21);
+insert into orders values('25--03--06', '카페신라', 36, 6);
+insert into orders values('25--03--07', '서강대교식당', 15, 12);
+insert into orders values('25--03--08', '부바레스토랑', 36, 13);
+insert into orders values('25--03--09', '레스토랑가야', 22, 8);
+insert into orders values('25--03--10', '동경반점', 22, 10);
+insert into orders values('25--03--12', '부바레스토랑', 57, 5);
+insert into orders values('25--03--12', '서강대교식당', 15, 3);
+insert into orders values('25--03--12', '서강대교식당', 10, 12);
+
+// 9. 테이블 조회하기
+
+// 10. 3개의 테이블 데이터를 활용하여 데이터 조회(출력)하기
+
+// 11. 실습예제
+1) 상품이름이 '만두'라는 글자가 들어간 상품명 출력하기
+select * from goods where g_name like '%만두%';
+
+2) 주문정보 테이블에서 '레스토랑'글자가 들어간 '날짜(o_day)', '이름(c_name)'을 출력하기
+select o_day, c_name from orders where c_name like '%레스토랑%';
+
+select o_day 주문일, c_name 상호명 from orders where c_name like '%레스토랑%';
+
+3) 고객테이블(customer)에서 역삼동에 위치한 상호명, 주소, 전화번호를 이름순으로 출력하시오.
+select c_name, c_address, c_name from customer where c_address like '%역삼동%' 
+
+4) orders 테이블에서 주문 수량이 10개 이상인 상호명을 중복없이(distinct) 출력하시오.
+select distinct c_name from orders where o_num >= 10;
