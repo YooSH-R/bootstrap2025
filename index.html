@@ -1,34 +1,137 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>sass소개와 문법학습하기</title>
+  <title>Bootstrap - 세계에서 가장 인기있는 HTML, CSS, JS 라이브러리</title>
+  <!-- 1. 부트스트랩 css cdn주소 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- 2. 부트스트랩 js cdn주소-->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    h1 {
+      text-align: center;
+      padding-top: 10px;
+    }
+
+    h1 img {
+      width: 100px;
+    }
+
+    h1 span {
+      font-size: 15px;
+    }
+
+    /* 테두리선 */
+    .border01 {
+      border-top: 3px solid #3c073e;
+      border-bottom: 3px solid #7a2bd4;
+    }
+
+    /* 목록 제목 배경 */
+    .bgcolor01 {
+      background: #791ce4;
+    }
+
+    dl {
+      text-indent: 10px;
+      background: #f6f6f6;
+    }
+
+    dt {
+      font-size: 14px;
+      color: #fff;
+      padding: 12px 0;
+      font-weight: bold;
+      border-bottom: 0;
+    }
+
+    dd {
+      border-bottom: 1px solid #ccc;
+      text-indent: 16px;
+      line-height: 40px;
+      margin-bottom: 0;
+    }
+
+    dd>a {
+      display: block;
+      font-size: 13px;
+      color: #333;
+      text-decoration: none;
+    }
+
+    dd>a:hover {
+      background: beige;
+    }
+
+    footer {
+      background: #9e4efa;
+      color: #fff;
+      text-align: center;
+      line-height: 40px;
+    }
+
+    footer>address {
+      font-style: normal;
+      font-size: 12px;
+    }
+  </style>
 </head>
+
 <body>
-  <h2>sass소개와 문법학습하기</h2>
-  <dl>
-    <dt>1일차</dt>
-    <dd><a href="./1021_SASS/01_sass소개와 문법.html" title="">01_sass소개와 문법</a></dd>
-    
-    <dt>2일차</dt>
-    <dd><a href="./1022_SASS/02_sass문법_믹싱문법(mixing)_include기법.html" title="">02_sass문법_믹싱문법(mixing)_include기법</a></dd>
-    <dt>3일차</dt>
+  <!-- 상단헤더영역 -->
+  <header>
+    <h1><span>세상에서 가장 인기있는 HTML, CSS, JAVASCRIPT 라이브러리 - Bootstrap 5.3.8</span>
+      <a href="https://getbootstrap.kr" title="부트스트랩 5.3.8 공식사이트로 이동하기">
+        <img src="./1104_bootstrap_SQL/images/bootstrap-logo-shadow.png" alt="상단로고">
+      </a>
+    </h1>
+  </header>
 
-    <dd><a href="./1023_SASS_미에로/sass문법_믹싱기법을 활용한 모바일 토글버튼 구현하기.html" title="">02_sass문법_믹싱문법(mixing)_include 응용</a></dd>
+  <!-- 메인콘텐츠 영역 - 목차 -->
+  <main>
+    <section>
+      <dl>
+        <dt class="bgcolor01">부트스트랩 1일차</dt>
+        <dd><a href="./1029_미에로(그누보드)_bootstrap/01_부트스랩소개와 작성법_장단점.html" title="부트스랩소개">부트스랩소개</a></dd>
+        <dd><a href="./1029_미에로(그누보드)_bootstrap/02_부트스트랩에서 아이콘폰트 사용하기.html" title="아이콘폰트">아이콘폰트</a></dd>
+        <dd><a href="./1029_미에로(그누보드)_bootstrap/03_부트스트랩을 활용한 그리드레이아웃.html" title="그리드레이아웃">그리드레이아웃</a></dd>
+        <dd><a href="./1029_미에로(그누보드)_bootstrap/04_부트스트랩을 활용한 그리드레이아웃_실습하기.html" title="그리드레이아웃_실습하기">그리드레이아웃_실습하기</a>
+        </dd>
+        <dt class="bgcolor01">부트스트랩 2일차</dt>
+        <dd><a href="./1030_미에로(그누보드)_bootstrap/01_bootstrap_문단_텍스트 관련 서식.html" title="문단_텍스트_목록">문단_텍스트_목록</a></dd>
+        <dd><a href="./1030_미에로(그누보드)_bootstrap/02_bootstrap_테이블 관련 서식.html" title="테이블">테이블</a></dd>
+        <dd><a href="./1030_미에로(그누보드)_bootstrap/03_bootstrap_버튼 관련 서식.html" title="버튼">버튼</a></dd>
+        <dd><a href="./1030_미에로(그누보드)_bootstrap/04_bootstrap_페이지네이션.html" title="페이지네이션">페이지네이션</a></dd>
+        <dt class="bgcolor01">부트스트랩 3일차</dt>
+        <dd><a href="./1031_bootstrap_SQL/01_이미지 관련.html" title="이미지 관련"></a></dd>
+        <dd><a href="./1031_bootstrap_SQL/02_폼태그.html" title="폼태그">폼태그</a></dd>
+        <dd><a href="./1031_bootstrap_SQL/03_경고메세지_닫기.html" title="경고메세지_닫기">경고메세지_닫기</a></dd>
+        <dd><a href="./1031_bootstrap_SQL/04_모달윈도 띄우기(로그인).html" title="모달윈도 띄우기(로그인)">모달윈도 띄우기(로그인)</a></dd>
+        <dd><a href="./1031_bootstrap_SQL/05_모달윈도 띄우기2(로그인).html" title="모달윈도 띄우기2(로그인)">모달윈도 띄우기2(로그인)</a></dd>
+        <dt class="bgcolor01">부트스트랩 4일차</dt>
+        <dd><a href="./1103_bootstrap_SQL/01_부트스트랩을 활용한 회원가입폼.html" title="회원가입폼">회원가입폼</a></dd>
+        <dd><a href="./1103_bootstrap_SQL/02_부트스트랩_휘장과 라벨.html" title="휘장과 라벨">휘장과 라벨</a></dd>
+        <dd><a href="./1103_bootstrap_SQL/03_부트스트랩_진행바(프로그레스바).html" title="진행바(프로그레스바)">진행바(프로그레스바)</a></dd>
+        <dd><a href="./1103_bootstrap_SQL/04_부트스트랩_카드디자인.html" title="부트스트랩_카드디자인">부트스트랩_카드디자인</a></dd>
+        <dd><a href="./1103_bootstrap_SQL/실습_내물건팔기/실습_내물건팔기.html" title="실습_내물건팔기">실습_내물건팔기</a></dd>
+        <dt class="bgcolor01">부트스트랩 5일차</dt>
+        <dd><a href="./1104_bootstrap_SQL/01_반응형 내비게이션과 웹 copy.html" title="반응형 내비게이션과 웹">반응형 내비게이션과 웹</a></dd>
+        <dd><a href="./1104_bootstrap_SQL/02_반응형웹 완성.html" title="반응형웹 완성">반응형웹 완성</a></dd>
+      </dl>
+    </section>
+  </main>
 
-    <dt>4일차</dt>
-    <dd><a href="./1024_SASS_미에로/sass문법_mixin함수와 매개변수 응용하기.html" title="">sass문법_mixin함수와 매개변수 응용하기</a></dd>
-
-    <dt>5일차</dt>
-    <dd><a href="./1027_SASS_미에로(그누보드)/01_변수의 개념과 활용.html" title="">01_변수의 개념과 활용</a></dd>
-    <dd><a href="./1027_SASS_미에로(그누보드)/02_중첩규칙.html" title="">02_중첩규칙</a></dd>
-
-    <dt>6일차</dt>
-    <dd><a href="./1028_SASS_미에로(그누보드)/01_sass문법_import.html" title="">01_sass문법_import</a></dd>
-    <dd><a href="./1028_SASS_미에로(그누보드)/02_sass문법_내장함수.html" title="">02_sass문법_내장함수</a></dd>
-    <dd><a href="./1028_SASS_미에로(그누보드)/03_sass문법_if문.html" title="">03_sass문법_if문</a></dd>
-    <dd><a href="./1028_SASS_미에로(그누보드)/04_sass문법_반복문.html" title="">04_sass문법_반복문</a></dd>
-  </dl>
+  <footer>
+    <address>Copyright&copy;2025 Bootstrap allrights reserved.</address>
+  </footer>
 </body>
+
 </html>
