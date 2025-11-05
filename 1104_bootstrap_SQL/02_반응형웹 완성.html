@@ -97,7 +97,7 @@
       border-radius: 50%;
     }
 
-    .cont2 h2 {
+    .cont2 h3 {
       font-weight: bold;
       font-size: 1.25rem;
     }
@@ -107,45 +107,32 @@
     }
 
     /* 4번 콘텐츠 서식 */
+
     .cont4 img {
       width: 100%;
     }
 
     .cont4 h3 {
-      font-size: 1.25rem;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      white-space: nowrap;
+      font-size: 1.2rem;
     }
 
     .cont4 p {
       font-size: 0.8rem;
-      display: -webkit-box;
-      -webkit-line-clamp: 2;
-      -webkit-box-orient: vertical;
-      overflow: hidden;
-      text-overflow: ellipsis;
+    }
+
+    .cont4 .row div{
+      position:relative;
+      height:22rem;
+    }
+
+    .cont4 a{
+      position:absolute;
+      bottom:5%;
     }
   </style>
 </head>
 
 <body>
-  <h2>01_반응형 내비게이션</h2>
-  <p>Bootstrap의 강력하고 반응형적인 내비게이션 헤더, 내비게이션 바의 문서와 예. 콜랩스(collapse) 플러그인 지원을 포함한 브랜딩, 내비게이션 등의 지원이 포함되어 있습니다.</p>
-
-  <h3>내비게이션 작동원리</h3>
-  <ul>
-    <li>내비게이션 바는 .navbar를 .navbar-expand{-sm|-md|-lg|-xl|-xxl}로 감싸야 하며, color scheme클래스가 필요합니다.</li>
-    <li>내비게이션과 그 콘텐츠는 기본적으로 유동적입니다. container를 변경하여 다양한 방법으로 가로폭을 제한 할 수 있습니다.</li>
-    <li>내비게이션에서 배치 및 간격 제어는 spacing과 flex 유틸리티 클래스를 사용합니다.</li>
-    <li>내비게이션은 기본적으로 반응형이지만 간단하게 변경이 가능합니다. 반응형 동작은 Collapse javascript플러그인에 의존합니다.</li>
-    <li>접근성을 확보하려면 nav요소를 사용하거나 혹은 div와 같이 보다 범용적인 요소를 사용하는 경우 role='navigation'을 추가하여 스크린 리더 사용자를 위해 랜드마크가 되는 곳 임을
-      명시적으로 알려주어야 합니다.</li>
-    <li>현재 페이지에는 aria-current="page"를, 세트안에서의 현재 아이템에는 aria-current="true"를 사용하여 현재 아이템을 표시합니다.</li>
-    <li>.navbar 기본 클래스로 범위가 지정된 css변수를 사용하여 테마를 지정할 수 있습니다. navgar-light는 더 이상 사용되지 않으며, 추가 스타일을 대신 css변수를 정의하도록
-      .navbar-dark가 재작성되었습니다.</li>
-  </ul>
-
   <!-- 상단헤더영역 -->
   <header>
     <!-- 내비게이션 바 -->
@@ -237,19 +224,21 @@
     <!-- 2. 가로 3단 목록 콘텐츠 -->
     <article class="container my-5 cont2-con">
       <div class="row cont2">
+        <h2>매출의 신 '추천+타겟팅'</h2>
+        <p style="font-size:1rem;">AI가 추천하는 맞춤 상품과 타겟팅으로 완성하는 구매 전환까지!</p>
         <div class="col-lg-4 text-center">
           <img src="./images/cont2-img1.png" alt="">
-          <h2 class="my-3">이프두 마케팅 자동화</h2>
+          <h3 class="my-3">이프두 마케팅 자동화</h3>
           <p>고객 여정별 맞춤 메시지를 자동으로 띄우는 AI 마케팅 자동화.</p>
         </div>
         <div class="col-lg-4 text-center">
           <img src="./images/cont2-img2.png" alt="">
-          <h2 class="my-3">아크로스CRM</h2>
+          <h3 class="my-3">아크로스CRM</h3>
           <p>30일무료 | 온사이트, 친구톡, 알림톡, 문자</p>
         </div>
         <div class="col-lg-4 text-center">
           <img src="./images/cont2-img3.png" alt="">
-          <h2 class="my-3">알파업셀</h2>
+          <h3 class="my-3">알파업셀</h3>
           <p>AI상품추천 / 구매버튼팝업 / 추가구매 유도</p>
         </div>
       </div>
